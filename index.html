@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Sparta</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+        body {
+            background-color:#e8344e ;
+        }
+        .envelope{
+            width: 200px;
+            height: 200px;
+            background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+            background-size: cover;
+            background-position: center;
+            margin: 100px auto 0px auto;
+        }
+        .envelope-msg {
+            color: white;
+            text-align: center;
+        }
+        .letter-closed {
+            display: block;
+            cursor: pointer;
+        }
+        .letter-open {
+            display: none;
+        }
+        .rtanny {
+            width: 200px;
+            height: 200px;
+            background-image:url('https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/global/SpartaIcon41.gif') ;
+            background-size: cover;
+            background-position: center;
+            background-color: white;
+            border-radius: 110px;
+            border: 5px solid  white;
+            margin: 100px auto 0px auto;
+            box-shadow: 0px 0px 10px 0px white;
+
+        }
+        .letter-title {
+            color: white;
+            text-align: center;
+        }
+        .message-box {
+            background-color:ivory;
+            color: brown;
+            width: 400px;
+            box-shadow:0px 0px 10px 0px ivory;
+            border: 5px solid ivory;
+            margin: 10px auto 0px auto;
+            padding: 20px;
+
+        }
+        @media screen and (max-width: 760px) {
+            .message-box {
+                width: 290px;
+                padding: 10px;
+            }
+            .rtanny {
+                width: 150px;
+                height: 150px;
+                margin: 45px auto 0px auto;
+            }
+            .letter-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            .envelope {
+                width: 150px;
+                height: 150px;
+                margin: 180px auto 0px auto;
+            }
+            .envelope-msg {
+                font-size: 22px;
+            }
+        }
+    </style>
+    <script>
+        function open_letter (){
+            document.getElementsByClassName("letter-closed")[0].style.display = 'none';
+            document.getElementsByClassName("letter-open")[0].style.display = 'block';
+        }
+        function click_rtanny (){
+            alert('Yey, you found me! I have a nice song for you');
+            window.location.href='https://www.youtube.com/watch?v=KtC-YoxpPrU';
+        }
+    </script>
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/global/confetti.js"></script>
+
+    <meta property="og:image" content="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26880378.jpg">
+    <meta property="og:description" content="Please check out my card">
+    <meta property="og:title" content="Hello, Sparta">
+
+    <link rel="shortcut icon" href="https://freepngimg.com/download/gift/22649-9-birthday-gift.png">
+    <!--image for tab icon called favicon-->
+</head>
+<body>
+    <div class="letter-closed" onclick="open_letter()">
+        <div class="envelope"></div>
+        <h2 class="envelope-msg">Please click the envelope! </h2>
+
+    </div>
+
+    <div class="letter-open">
+        <div class="rtanny" onclick="click_rtanny()"></div>
+    <h1 class="letter-title">Hello, Sparta!</h1>
+    <div class="message-box">
+        Thanks for made this wonderful course<br/>
+        Wishing you all the great things in life <br/>
+        I hope we can meet again in the future with another great lesson<br/>
+        Sincerely, <br/>
+        Tina
+
+    </div>
+    </div>
+    
+     
+</body>
+</html>
